@@ -1,0 +1,5 @@
+pnpm create vite angel-monetary --template react-ts
+cd angel-monetary
+git init
+# git add & git commit in vscode.
+touch command-history.txt
