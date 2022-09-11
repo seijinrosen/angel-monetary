@@ -3,3 +3,5 @@ cd angel-monetary
 git init
 # git add & git commit in vscode.
 touch command-history.txt
+gh repo create
+touch Makefile
