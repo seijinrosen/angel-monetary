@@ -5,3 +5,6 @@ git init
 touch command-history.txt
 gh repo create
 touch Makefile
+
+echo "auto-install-peers=true" > .npmrc
+pnpm add @mui/material @emotion/react @emotion/styled
