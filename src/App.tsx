@@ -1,4 +1,4 @@
-import { Box, Button, Container } from "@mui/material";
+import { Box, Button, Container, Link } from "@mui/material";
 import { useState } from "react";
 import Masu from "./components/Masu";
 
@@ -391,6 +391,33 @@ function App() {
           おめでとうございます！おそらく151枚がMAXです。それ以上のスコアを出した方がいらっしゃいましたらご連絡ください。
         </p>
       )}
+      <Box mt={10}>
+        このゲームは、
+        <Link
+          href="http://stst.cocot.jp/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ステッパーズ・ストップ
+        </Link>
+        のポーンさん（
+        <Link
+          href="https://twitter.com/pawwn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @pawwn
+        </Link>
+        ）の
+        <Link
+          href="https://twitter.com/pawwn/status/936229335949746176"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          このツイート
+        </Link>
+        から作られました。
+      </Box>
     </Container>
   );
 }
