@@ -8,3 +8,4 @@ touch Makefile
 
 echo "auto-install-peers=true" > .npmrc
 pnpm add @mui/material @emotion/react @emotion/styled
+pnpm add @mui/icons-material
