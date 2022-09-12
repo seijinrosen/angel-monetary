@@ -37,7 +37,7 @@ const Masu = ({
 }) => {
   return (
     <Button
-      variant={tootta ? "outlined" : "contained"}
+      variant={tootta ? "contained" : "outlined"}
       disabled={disabled}
       onClick={onClick}
       sx={{
@@ -52,6 +52,7 @@ const Masu = ({
         right: right,
         bottom: bottom,
         left: left,
+        p: 0,
         pt: pt,
         pr: pr,
         pb: pb,
