@@ -1,21 +1,142 @@
 import { Box, Container } from "@mui/material";
+import { useState } from "react";
 import Masu from "./components/Masu";
 
+const getTonari = (id: number): number[] => {
+  switch (id) {
+    case 1:
+      return [2, 5, 9];
+    case 2:
+      return [1, 3, 5, 6];
+    case 3:
+      return [2, 4, 6, 7, 8];
+    case 4:
+      return [3, 8, 14];
+    case 5:
+      return [1, 2, 6, 9, 10];
+    case 6:
+      return [2, 3, 5, 7, 10, 11, 12];
+    case 7:
+      return [3, 6, 8, 12];
+    case 8:
+      return [3, 4, 7, 12, 13, 14];
+    case 9:
+      return [1, 5, 10, 15];
+    case 10:
+      return [5, 6, 9, 11, 15, 16, 17];
+    case 11:
+      return [6, 10, 12, 17];
+    case 12:
+      return [6, 7, 8, 11, 13, 17, 18, 19];
+    case 13:
+      return [8, 12, 14, 19];
+    case 14:
+      return [4, 8, 13, 19];
+    case 15:
+      return [9, 10, 16];
+    case 16:
+      return [10, 15, 17];
+    case 17:
+      return [10, 11, 12, 16, 18];
+    case 18:
+      return [12, 17, 19];
+    case 19:
+      return [12, 13, 14, 18];
+    default:
+      return [];
+  }
+};
+
+const convertCoin = (id: number, coin: number): number => {
+  switch (id) {
+    case 1:
+      return coin * 2;
+    case 2:
+      return coin + 1;
+    case 3:
+      return coin + 4;
+    case 4:
+      return coin;
+    case 5:
+      return coin + 3;
+    case 6:
+      return coin + 10;
+    case 7:
+      return coin + 1;
+    case 8:
+      return coin * 2;
+    case 9:
+      return coin + 3;
+    case 10:
+      return coin + 5;
+    case 11:
+      return coin + 1;
+    case 12:
+      return 0;
+    case 13:
+      return coin + 1;
+    case 14:
+      return coin + 3;
+    case 15:
+      return coin;
+    case 16:
+      return coin + 2;
+    case 17:
+      return coin * 2;
+    case 18:
+      return coin + 1;
+    case 19:
+      return coin + 20;
+    default:
+      return coin;
+  }
+};
+
 function App() {
+  const [coin, setCoin] = useState(0);
+  const [ikeruMasuIds, setIkeruMasuIds] = useState([15]);
+  const [toottaMasuIds, setToottaMasuIds] = useState<number[]>([]);
+  const [cursed, setCursed] = useState(true);
+  const [ending, setEnding] = useState("");
+
+  const handleClick = (id: number) => {
+    if (id === 4) {
+      setEnding(cursed ? "デッドエンド" : "おしまエンド");
+      setIkeruMasuIds([]);
+      return;
+    }
+    if (id === 12) setCursed(false);
+    setCoin(convertCoin(id, coin));
+    const newToottaMasuIds = [...toottaMasuIds, id];
+    setToottaMasuIds(newToottaMasuIds);
+    const newIkeruMasuIds = getTonari(id).filter(
+      (v) => !newToottaMasuIds.includes(v)
+    );
+    setIkeruMasuIds(newIkeruMasuIds);
+    if (!newIkeruMasuIds.length) setEnding("行き止まりエンド");
+  };
+
   return (
     <Container component="main" maxWidth="sm">
       <h1>エンゼルマネタリー</h1>
+      <p>現在のコイン枚数：{coin}</p>
       <Box position="relative" height={500} mb={1}>
         <Masu
           id={1}
-          text="A ミカエルの祝福 *2"
+          text="A1 ミカエルの祝福 *2"
+          tootta={toottaMasuIds.includes(1)}
+          disabled={!ikeruMasuIds.includes(1)}
+          onClick={() => handleClick(1)}
           width="25%"
           height="33%"
           zIndex={49}
         />
         <Masu
           id={2}
-          text="B コイン1枚"
+          text="B2 コイン1枚"
+          tootta={toottaMasuIds.includes(2)}
+          disabled={!ikeruMasuIds.includes(2)}
+          onClick={() => handleClick(2)}
           width="25%"
           height="30%"
           left="25%"
@@ -23,7 +144,10 @@ function App() {
         />
         <Masu
           id={3}
-          text="C コイン4枚"
+          text="C3 コイン4枚"
+          tootta={toottaMasuIds.includes(3)}
+          disabled={!ikeruMasuIds.includes(3)}
+          onClick={() => handleClick(3)}
           width="25%"
           height="25%"
           zIndex={48}
@@ -31,7 +155,10 @@ function App() {
         />
         <Masu
           id={4}
-          text="D GOAL 解呪されていないと死亡"
+          text="D4 GOAL 解呪されていないと死亡"
+          tootta={toottaMasuIds.includes(4)}
+          disabled={!ikeruMasuIds.includes(4)}
+          onClick={() => handleClick(4)}
           width="25%"
           height="33%"
           zIndex={46}
@@ -40,7 +167,10 @@ function App() {
         />
         <Masu
           id={5}
-          text="E コイン 3枚"
+          text="E5 コイン 3枚"
+          tootta={toottaMasuIds.includes(5)}
+          disabled={!ikeruMasuIds.includes(5)}
+          onClick={() => handleClick(5)}
           width="25%"
           height="33%"
           zIndex={48}
@@ -50,7 +180,10 @@ function App() {
         />
         <Masu
           id={6}
-          text="F コイン10枚"
+          text="F6 コイン10枚"
+          tootta={toottaMasuIds.includes(6)}
+          disabled={!ikeruMasuIds.includes(6)}
+          onClick={() => handleClick(6)}
           width="25%"
           height="30%"
           zIndex={49}
@@ -59,7 +192,10 @@ function App() {
         />
         <Masu
           id={7}
-          text="G コイン1枚"
+          text="G7 コイン1枚"
+          tootta={toottaMasuIds.includes(7)}
+          disabled={!ikeruMasuIds.includes(7)}
+          onClick={() => handleClick(7)}
           width="10%"
           height="25%"
           top="25%"
@@ -67,17 +203,32 @@ function App() {
         />
         <Masu
           id={8}
-          text="H ガブリエルの祝福 *2"
+          text="H8 ガブリエルの祝福 *2"
+          tootta={toottaMasuIds.includes(8)}
+          disabled={!ikeruMasuIds.includes(8)}
+          onClick={() => handleClick(8)}
           width="25%"
           height="35%"
           zIndex={47}
           top="20%"
           right="10%"
         />
-        <Masu id={9} text="I コイン3枚" width="20%" height="35%" top="33%" />
+        <Masu
+          id={9}
+          text="I9 コイン3枚"
+          tootta={toottaMasuIds.includes(9)}
+          disabled={!ikeruMasuIds.includes(9)}
+          onClick={() => handleClick(9)}
+          width="20%"
+          height="35%"
+          top="33%"
+        />
         <Masu
           id={10}
-          text="J コイン5枚"
+          text="J10 コイン5枚"
+          tootta={toottaMasuIds.includes(10)}
+          disabled={!ikeruMasuIds.includes(10)}
+          onClick={() => handleClick(10)}
           width="20%"
           height="30%"
           zIndex={52}
@@ -86,7 +237,10 @@ function App() {
         />
         <Masu
           id={11}
-          text="K コイン1枚"
+          text="K11 コイン1枚"
+          tootta={toottaMasuIds.includes(11)}
+          disabled={!ikeruMasuIds.includes(11)}
+          onClick={() => handleClick(11)}
           width="10%"
           height="15%"
           top="50%"
@@ -94,7 +248,10 @@ function App() {
         />
         <Masu
           id={12}
-          text="L ウリエルの解呪 コインが0枚になる"
+          text="L12 ウリエルの解呪 コインが0枚になる"
+          tootta={toottaMasuIds.includes(12)}
+          disabled={!ikeruMasuIds.includes(12)}
+          onClick={() => handleClick(12)}
           width="25%"
           height="30%"
           zIndex={50}
@@ -104,7 +261,10 @@ function App() {
         />
         <Masu
           id={13}
-          text="M コイン1枚"
+          text="M13 コイン1枚"
+          tootta={toottaMasuIds.includes(13)}
+          disabled={!ikeruMasuIds.includes(13)}
+          onClick={() => handleClick(13)}
           width="11%"
           height="20%"
           zIndex={45}
@@ -113,7 +273,10 @@ function App() {
         />
         <Masu
           id={14}
-          text="N コイン3枚"
+          text="N14 コイン3枚"
+          tootta={toottaMasuIds.includes(14)}
+          disabled={!ikeruMasuIds.includes(14)}
+          onClick={() => handleClick(14)}
           width="19%"
           height="33%"
           zIndex={46}
@@ -123,7 +286,10 @@ function App() {
         />
         <Masu
           id={15}
-          text="O START コインを多く集めろ！"
+          text="O15 START コインを多く集めろ！"
+          tootta={toottaMasuIds.includes(15)}
+          disabled={!ikeruMasuIds.includes(15)}
+          onClick={() => handleClick(15)}
           width="25%"
           height="32%"
           zIndex={53}
@@ -131,7 +297,10 @@ function App() {
         />
         <Masu
           id={16}
-          text="P コイン2枚"
+          text="P16 コイン2枚"
+          tootta={toottaMasuIds.includes(16)}
+          disabled={!ikeruMasuIds.includes(16)}
+          onClick={() => handleClick(16)}
           width="10%"
           height="30%"
           bottom="0"
@@ -139,7 +308,10 @@ function App() {
         />
         <Masu
           id={17}
-          text="Q ラファエルの祝福 *2"
+          text="Q17 ラファエルの祝福 *2"
+          tootta={toottaMasuIds.includes(17)}
+          disabled={!ikeruMasuIds.includes(17)}
+          onClick={() => handleClick(17)}
           width="25%"
           height="35%"
           zIndex={51}
@@ -148,7 +320,10 @@ function App() {
         />
         <Masu
           id={18}
-          text="R コイン1枚"
+          text="R18 コイン1枚"
+          tootta={toottaMasuIds.includes(18)}
+          disabled={!ikeruMasuIds.includes(18)}
+          onClick={() => handleClick(18)}
           width="10%"
           height="20%"
           zIndex={48}
@@ -157,7 +332,10 @@ function App() {
         />
         <Masu
           id={19}
-          text="S コイン20枚 ニャー"
+          text="S19 コイン20枚 ニャー"
+          tootta={toottaMasuIds.includes(19)}
+          disabled={!ikeruMasuIds.includes(19)}
+          onClick={() => handleClick(19)}
           width="30%"
           height="34%"
           zIndex={49}
@@ -169,6 +347,7 @@ function App() {
       ・隣のスペースに行ける
       <br />
       ・同じスペースは通れない
+      {ending && <p>{ending}</p>}
     </Container>
   );
 }

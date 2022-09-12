@@ -3,9 +3,12 @@ import { Button } from "@mui/material";
 const Masu = ({
   id,
   text,
+  tootta,
   width,
   height,
   zIndex,
+  disabled,
+  onClick,
   top,
   right,
   bottom,
@@ -17,8 +20,11 @@ const Masu = ({
 }: {
   id: number;
   text: string;
+  tootta: boolean;
   width: string;
   height: string;
+  disabled: boolean;
+  onClick: () => void;
   zIndex?: number;
   top?: string;
   right?: string;
@@ -31,7 +37,9 @@ const Masu = ({
 }) => {
   return (
     <Button
-      variant="contained"
+      variant={tootta ? "outlined" : "contained"}
+      disabled={disabled}
+      onClick={onClick}
       sx={{
         position: "absolute",
         border: "solid 1px",
