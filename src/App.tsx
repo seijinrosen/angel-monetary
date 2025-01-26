@@ -1,7 +1,9 @@
 import { Box, Button, Container, Link } from "@mui/material";
 import { useState } from "react";
+
 import Footer from "./components/Footer";
 import Masu from "./components/Masu";
+import { Rules } from "./components/Rules";
 
 const getTonari = (id: number): number[] => {
 	switch (id) {
@@ -385,9 +387,9 @@ function App() {
 						pt={10}
 					/>
 				</Box>
-				・隣のスペースに行ける
-				<br />
-				・同じスペースは通れない
+
+				<Rules />
+
 				<p>
 					<Button variant="outlined" onClick={reset}>
 						リセット
