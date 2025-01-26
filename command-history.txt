@@ -17,3 +17,4 @@ pnpm add --save-dev --save-exact @biomejs/biome
 pnpm biome init
 
 pnpm create @knip/config
+pnpm dlx storybook@latest init

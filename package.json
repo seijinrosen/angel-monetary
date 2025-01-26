@@ -7,9 +7,11 @@
 		"biome": "biome check",
 		"biome:write": "biome check --write",
 		"build": "tsc && vite build",
+		"build-storybook": "storybook build",
 		"dev": "vite",
 		"knip": "knip",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"storybook": "storybook dev -p 6006"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.14.0",
@@ -21,11 +23,20 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@chromatic-com/storybook": "^3.2.4",
+		"@storybook/addon-essentials": "^8.5.1",
+		"@storybook/addon-interactions": "^8.5.1",
+		"@storybook/addon-onboarding": "^8.5.1",
+		"@storybook/blocks": "^8.5.1",
+		"@storybook/react": "^8.5.1",
+		"@storybook/react-vite": "^8.5.1",
+		"@storybook/test": "^8.5.1",
 		"@types/node": "^22.10.10",
 		"@types/react": "^18.3.18",
 		"@types/react-dom": "^18.3.5",
 		"@vitejs/plugin-react": "^4.3.4",
 		"knip": "^5.43.3",
+		"storybook": "^8.5.1",
 		"typescript": "^4.9.5",
 		"vite": "^4.5.9"
 	},
