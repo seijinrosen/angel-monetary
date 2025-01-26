@@ -15,3 +15,5 @@ pnpm up @vitejs/plugin-react --latest
 
 pnpm add --save-dev --save-exact @biomejs/biome
 pnpm biome init
+
+pnpm create @knip/config

@@ -1,5 +1,8 @@
 {
 	"compilerOptions": {
+		// 自分で追加
+		"noUncheckedIndexedAccess": true,
+
 		"target": "ESNext",
 		"useDefineForClassFields": true,
 		"lib": ["DOM", "DOM.Iterable", "ESNext"],
