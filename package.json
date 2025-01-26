@@ -1,30 +1,32 @@
 {
-  "name": "angel-monetary",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^5.16.14",
-    "@mui/material": "^5.16.14",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "^4.9.5",
-    "vite": "^4.5.9"
-  },
-  "engines": {
-    "node": "22.x"
-  }
+	"name": "angel-monetary",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"biome": "biome check",
+		"biome:write": "biome check --write",
+		"build": "tsc && vite build",
+		"dev": "vite",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/icons-material": "^5.16.14",
+		"@mui/material": "^5.16.14",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/react": "^18.3.18",
+		"@types/react-dom": "^18.3.5",
+		"@vitejs/plugin-react": "^4.3.4",
+		"typescript": "^4.9.5",
+		"vite": "^4.5.9"
+	},
+	"engines": {
+		"node": "22.x"
+	}
 }

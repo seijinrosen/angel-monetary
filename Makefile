@@ -1,4 +1,5 @@
 check:
+	pnpm run biome
 	pnpm run build
 
 clean:
