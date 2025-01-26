@@ -11,3 +11,4 @@ pnpm add @mui/material @emotion/react @emotion/styled
 pnpm add @mui/icons-material
 
 pnpm update
+pnpm up @vitejs/plugin-react --latest
