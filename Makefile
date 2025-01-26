@@ -1,5 +1,15 @@
-dev:
-	pnpm dev
+check:
+	pnpm run build
 
-init:
+clean:
+	rm -r node_modules/
+	rm -r dist/
+
+dev:
+	pnpm run dev
+
+install:
 	pnpm install
+
+switch:
+	git switch --create develop
