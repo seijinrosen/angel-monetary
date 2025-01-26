@@ -1,6 +1,7 @@
 check:
 	pnpm run biome
 	pnpm run build
+	pnpm run knip
 
 clean:
 	rm -r node_modules/
