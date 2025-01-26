@@ -1,4 +1,5 @@
 biomejs
+chromaui
 ikeru
 knip
 Masu
