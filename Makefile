@@ -10,6 +10,9 @@ clean:
 dev:
 	pnpm run dev
 
+fix:
+	pnpm run biome:write
+
 install:
 	pnpm install
 

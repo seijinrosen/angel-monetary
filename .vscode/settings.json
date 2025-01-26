@@ -5,9 +5,6 @@
 	"[ignore]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
-	"[snippets]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
 	"editor.codeActionsOnSave": {
 		"source.organizeImports.biome": "explicit"
 	},
