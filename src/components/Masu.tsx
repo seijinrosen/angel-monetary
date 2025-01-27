@@ -1,7 +1,6 @@
 import { Button } from "@mui/material";
 
 const Masu = ({
-	id,
 	text,
 	tootta,
 	width,
@@ -18,6 +17,7 @@ const Masu = ({
 	pb,
 	pl,
 }: {
+	// TODO: id が必要ないのを指摘してほしい
 	id: number;
 	text: string;
 	tootta: boolean;
