@@ -6,7 +6,7 @@
 	"scripts": {
 		"biome": "biome check",
 		"biome:write": "biome check --write",
-		"build": "tsc && vite build",
+		"build": "tsc -b && vite build",
 		"build-storybook": "storybook build",
 		"dev": "vite",
 		"knip": "knip",
