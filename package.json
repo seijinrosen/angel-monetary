@@ -35,7 +35,7 @@
 		"@types/react-dom": "^19.0.4",
 		"@vitejs/plugin-react": "^4.3.4",
 		"knip": "^5.43.6",
-		"storybook": "^8.5.2",
+		"storybook": "^8.6.3",
 		"typescript": "^5.8.2",
 		"vite": "^6.0.11"
 	},
