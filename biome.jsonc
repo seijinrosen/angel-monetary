@@ -9,9 +9,17 @@
 		"ignoreUnknown": false,
 		"ignore": []
 	},
+	// "assists": {
+	// 	"actions": {
+	// 		"source": {
+	// 			"sortJsxProps": "on"
+	// 		}
+	// 	}
+	// },
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab"
+		// "attributePosition": "multiline"
 	},
 	"organizeImports": {
 		"enabled": true
@@ -19,6 +27,7 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
+			// "all": true,
 			"recommended": true,
 			"correctness": {
 				"noUnusedImports": "warn"
