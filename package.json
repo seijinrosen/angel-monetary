@@ -4,7 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"biome": "biome check",
+		"biome": "biome check --error-on-warnings",
 		"biome:write": "biome check --write",
 		"build": "tsc -b && vite build",
 		"build-storybook": "storybook build",
