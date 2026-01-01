@@ -37,8 +37,8 @@ importers:
         specifier: ^8.6.14
         version: 8.6.14(@types/react@19.0.10)(storybook@8.6.15)
       '@storybook/addon-interactions':
-        specifier: ^8.5.1
-        version: 8.5.1(storybook@8.6.15)
+        specifier: ^8.6.14
+        version: 8.6.14(storybook@8.6.15)
       '@storybook/blocks':
         specifier: ^8.6.12
         version: 8.6.12(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(storybook@8.6.15)
@@ -866,10 +866,10 @@ packages:
     peerDependencies:
       storybook: ^8.6.14
 
-  '@storybook/addon-interactions@8.5.1':
-    resolution: {integrity: sha512-tXCKBIWjwhVuSRRoEiPx+u0D4oqMkctTzysfoCw2sqftIT8t2yHyviX29s87z2NH+DNqzBGGDG1UUaLe5qq3Fw==}
+  '@storybook/addon-interactions@8.6.14':
+    resolution: {integrity: sha512-8VmElhm2XOjh22l/dO4UmXxNOolGhNiSpBcls2pqWSraVh4a670EyYBZsHpkXqfNHo2YgKyZN3C91+9zfH79qQ==}
     peerDependencies:
-      storybook: ^8.5.1
+      storybook: ^8.6.14
 
   '@storybook/addon-measure@8.6.14':
     resolution: {integrity: sha512-1Tlyb72NX8aAqm6I6OICsUuGOP6hgnXcuFlXucyhKomPa6j3Eu2vKu561t/f0oGtAK2nO93Z70kVaEh5X+vaGw==}
@@ -962,6 +962,11 @@ packages:
     peerDependencies:
       storybook: ^8.5.1
 
+  '@storybook/instrumenter@8.6.14':
+    resolution: {integrity: sha512-iG4MlWCcz1L7Yu8AwgsnfVAmMbvyRSk700Mfy2g4c8y5O+Cv1ejshE1LBBsCwHgkuqU0H4R0qu4g23+6UnUemQ==}
+    peerDependencies:
+      storybook: ^8.6.14
+
   '@storybook/manager-api@8.5.1':
     resolution: {integrity: sha512-Oj9kPYbp/82LRQ+rsc0ZH0fkzeiT2U1kvubmNiRjtopQHCP3UTVnvWIXC9zSRFKmS+NaAdd0JYsIBvE8fjnoqQ==}
     peerDependencies:
@@ -1018,6 +1023,11 @@ packages:
     resolution: {integrity: sha512-V0sEXqL5kS0YKugCqWgmCpNODdlCCiVlPqm3i+E2+G97DR980BwXf8J6VPscQDRS9ZG39BrM83Aau6Anxrt1Tg==}
     peerDependencies:
       storybook: ^8.5.1
+
+  '@storybook/test@8.6.14':
+    resolution: {integrity: sha512-GkPNBbbZmz+XRdrhMtkxPotCLOQ1BaGNp/gFZYdGDk2KmUWBKmvc5JxxOhtoXM2703IzNFlQHSSNnhrDZYuLlw==}
+    peerDependencies:
+      storybook: ^8.6.14
 
   '@storybook/theming@8.5.1':
     resolution: {integrity: sha512-sg61vY1gM8w42CIi28vo//6E1gHgHLNBNaRhkfvLFpu9PuhAcVWLwBDZq0BoKmDMxRxbSPV2gvIKeXdOtbSCJw==}
@@ -1119,6 +1129,9 @@ packages:
   '@vitest/pretty-format@2.1.8':
     resolution: {integrity: sha512-9HiSZ9zpqNLKlbIDRWOnAWqgcA7xu+8YxXSekhr0Ykab7PAYFkhkwoqVArPOtJhPmYeE2YHgKZlj3CP36z2AJQ==}
 
+  '@vitest/pretty-format@2.1.9':
+    resolution: {integrity: sha512-KhRIdGV2U9HOUzxfiHmY8IFHTdqtOhIzCpd8WRdJiE7D/HUcZVD0EgQCVjm+Q9gkUXWgBvMmTtZgIG48wq7sOQ==}
+
   '@vitest/spy@2.0.5':
     resolution: {integrity: sha512-c/jdthAhvJdpfVuaexSrnawxZz6pywlTPe84LUB2m/4t3rl2fTo9NFGBG4oWgaD+FTgDDV8hJ/nibT7IfH3JfA==}
 
@@ -1127,6 +1140,9 @@ packages:
 
   '@vitest/utils@2.1.8':
     resolution: {integrity: sha512-dwSoui6djdwbfFmIgbIjX2ZhIoG7Ex/+xpxyiEgIGzjliY8xGkcpITKTlp6B4MgtGkF2ilvm97cPM96XZaAgcA==}
+
+  '@vitest/utils@2.1.9':
+    resolution: {integrity: sha512-v0psaMSkNJ3A2NMrUEHFRzJtDPFn+/VWZ5WxImB21T9fjucJRmS7xCS3ppEnARb9y11OAzaD+P2Ps+b+BGX5iQ==}
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
@@ -1583,6 +1599,9 @@ packages:
 
   loupe@3.1.2:
     resolution: {integrity: sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==}
+
+  loupe@3.2.1:
+    resolution: {integrity: sha512-CdzqowRJCeLU72bHvWqwRBBlLcMEtIvGrlvef74kMnV2AolS9Y8xUv1I0U/MNAWMhBlKIoyuEgoJ0t/bbwHbLQ==}
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
@@ -2723,11 +2742,11 @@ snapshots:
       '@storybook/global': 5.0.0
       storybook: 8.6.15
 
-  '@storybook/addon-interactions@8.5.1(storybook@8.6.15)':
+  '@storybook/addon-interactions@8.6.14(storybook@8.6.15)':
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/instrumenter': 8.5.1(storybook@8.6.15)
-      '@storybook/test': 8.5.1(storybook@8.6.15)
+      '@storybook/instrumenter': 8.6.14(storybook@8.6.15)
+      '@storybook/test': 8.6.14(storybook@8.6.15)
       polished: 4.3.1
       storybook: 8.6.15
       ts-dedent: 2.2.0
@@ -2829,6 +2848,12 @@ snapshots:
       '@vitest/utils': 2.1.8
       storybook: 8.6.15
 
+  '@storybook/instrumenter@8.6.14(storybook@8.6.15)':
+    dependencies:
+      '@storybook/global': 5.0.0
+      '@vitest/utils': 2.1.9
+      storybook: 8.6.15
+
   '@storybook/manager-api@8.5.1(storybook@8.6.15)':
     dependencies:
       storybook: 8.6.15
@@ -2891,6 +2916,17 @@ snapshots:
       '@storybook/csf': 0.1.12
       '@storybook/global': 5.0.0
       '@storybook/instrumenter': 8.5.1(storybook@8.6.15)
+      '@testing-library/dom': 10.4.0
+      '@testing-library/jest-dom': 6.5.0
+      '@testing-library/user-event': 14.5.2(@testing-library/dom@10.4.0)
+      '@vitest/expect': 2.0.5
+      '@vitest/spy': 2.0.5
+      storybook: 8.6.15
+
+  '@storybook/test@8.6.14(storybook@8.6.15)':
+    dependencies:
+      '@storybook/global': 5.0.0
+      '@storybook/instrumenter': 8.6.14(storybook@8.6.15)
       '@testing-library/dom': 10.4.0
       '@testing-library/jest-dom': 6.5.0
       '@testing-library/user-event': 14.5.2(@testing-library/dom@10.4.0)
@@ -3022,6 +3058,10 @@ snapshots:
     dependencies:
       tinyrainbow: 1.2.0
 
+  '@vitest/pretty-format@2.1.9':
+    dependencies:
+      tinyrainbow: 1.2.0
+
   '@vitest/spy@2.0.5':
     dependencies:
       tinyspy: 3.0.2
@@ -3037,6 +3077,12 @@ snapshots:
     dependencies:
       '@vitest/pretty-format': 2.1.8
       loupe: 3.1.2
+      tinyrainbow: 1.2.0
+
+  '@vitest/utils@2.1.9':
+    dependencies:
+      '@vitest/pretty-format': 2.1.9
+      loupe: 3.2.1
       tinyrainbow: 1.2.0
 
   acorn@8.15.0: {}
@@ -3469,6 +3515,8 @@ snapshots:
       js-tokens: 4.0.0
 
   loupe@3.1.2: {}
+
+  loupe@3.2.1: {}
 
   lru-cache@5.1.1:
     dependencies:
